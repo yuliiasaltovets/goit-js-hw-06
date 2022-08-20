@@ -1,5 +1,5 @@
 
-const button = document.queryCommandValue('.change-color');
+const button = document.querySelector('.change-color');
 const bgColor = document.querySelector('.color');
 const bodyElement = document.querySelector('body');
 
