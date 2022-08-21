@@ -1,3 +1,5 @@
+
+
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -7,19 +9,15 @@ const ingredients = [
   'Condiments',
 ];
 
-const ulELement = document.querySelector('ul');
+const ulELement = document.querySelector('#ingredients');
 
-const elements = [];
+const onIngredEl = ingredients.map(element => {
+  const liElement = document.createElement('li');
+  liElement.classList.add('item');
+  liElement.textContent = element.textContent;
 
-for (let i = 0; i < ingredients.length; i += 1) {
-  const ing = ingredients[i];
+  return liElement;
+});
 
-  const liEl = document.createElement('li');
-  liEl.textContent = ing;
-  liEl.classList.add('item');
-
-  elements.push(liEl);
-}
- 
-ulELement.append(...elements);
-console.log(ulELement);
+console.log(onIngredEl);
+ulELement.append(...onIngredEl);
